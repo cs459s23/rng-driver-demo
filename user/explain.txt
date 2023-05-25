@@ -1,9 +1,0 @@
-This code is a program that lists the files and directories in a given path. It includes several header files that define types and functions used in the code.
-
-The fmtname function takes a path as input and returns the name of the file or directory at the end of the path. It first finds the index of the last slash in the path, which indicates the start of the file or directory name. It then copies the name to a buffer, pads it with spaces if necessary, and returns the buffer.
-
-The ls function takes a path as input and prints information about the files and directories in the path. It first opens the path and gets information about it using the fstat function. If the path is a device or file, it prints the name, type, inode number, and size. If the path is a directory, it reads the directory entries and prints information about each file or directory in the directory, recursively calling ls on any subdirectories.
-
-The main function takes command line arguments as input and calls ls on each argument, or on the current directory if no arguments are provided.
-
-Overall, this code demonstrates how to use file system functions to list the contents of a directory in an operating system.
