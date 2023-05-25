@@ -15,3 +15,5 @@ python3-venv ninja-build pkg-config libglib2.0-dev libpixman-1-dev flex bison
 
 make -j`nproc`
 ./qemu-system-riscv64 -nographic
+
+riscv64-unknown-elf-gcc    -c -o kernel/entry.o kernel/entry.S
