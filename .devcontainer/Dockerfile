@@ -9,4 +9,9 @@ RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
 
 # From MIT class docs
 # https://pdos.csail.mit.edu/6.1810/2022/tools.html
-RUN apt-get install -y git build-essential gdb-multiarch qemu-system-misc gcc-riscv64-linux-gnu binutils-riscv64-linux-gnu 
+RUN apt-get install -y git build-essential gdb-multiarch qemu-system-misc gcc-riscv64-linux-gnu binutils-riscv64-linux-gnu software-properties-common
+
+RUN add-apt-repository ppa:neovim-ppa/stable -y \
+    && sudo apt update \
+    && apt-get install neovim -y
+
